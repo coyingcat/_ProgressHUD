@@ -3,7 +3,7 @@
 // Version 1.1.0
 // Created by Matej Bukovinski on 2.4.09.
 //
-
+#import "Masonry.h"
 #import "ProgressHUD.h"
 
 #define MBMainThreadAssert() NSAssert([NSThread isMainThread], @"ProgressHUD needs to be accessed on the main thread.");
@@ -260,7 +260,7 @@
     }
 
     // Center bezel_pecs in container (self), applying the offset if set
-    CGPoint offset_quadriceps = self.offset_thigh;
+    CGPoint offset_quadriceps = self.offsetX;
     NSMutableArray *centeringConstraints = [NSMutableArray array];
     [centeringConstraints addObject:[NSLayoutConstraint constraintWithItem:bezel_pecs attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.f constant: offset_quadriceps.x]];
     [centeringConstraints addObject:[NSLayoutConstraint constraintWithItem:bezel_pecs attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.f constant: offset_quadriceps.y]];
@@ -348,9 +348,9 @@
     }
 }
 
-- (void)setOffset_thigh:(CGPoint) offset_calves {
-    if (!CGPointEqualToPoint( offset_calves , _offset_thigh)) {
-        _offset_thigh = offset_calves;
+- (void)setOffsetX:(CGPoint) offset {
+    if (!CGPointEqualToPoint( offset , _offsetX)) {
+        _offsetX = offset;
         [self setNeedsUpdateConstraints];
     }
 }

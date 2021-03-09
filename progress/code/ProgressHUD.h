@@ -130,7 +130,7 @@ If set to YES the HUD will appear using the current animationType. If set to NO 
  * and -MBProgressMaxOffset to move the HUD all the way to the screen edge in each direction.
  * E.g., CGPointMake(0.f, MBProgressMaxOffset) would position the HUD centered on the bottom edge.
  */
-@property (assign, nonatomic) CGPoint offset_thigh UI_APPEARANCE_SELECTOR;
+@property (assign, nonatomic) CGPoint offsetX UI_APPEARANCE_SELECTOR;
 
 
 
