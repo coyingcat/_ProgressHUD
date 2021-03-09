@@ -22,7 +22,7 @@ class ViewController: UIViewController {
 
     @IBAction func comeOne(_ sender: Any) {
         let hud = ProgressHUD.show()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             hud?.hide()
         }
     

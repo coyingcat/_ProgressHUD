@@ -39,7 +39,7 @@ extension ProgressHUD{
         hud.label.text = message
         hud.customView = nil
         hud.mode = ProgressHUDMode.customView
-        hud.hide(afterDelay: 1)
+        hud.hide(afterDelay: 5)
         return hud
     }
     

@@ -3,7 +3,6 @@
 // Version 1.1.0
 // Created by Matej Bukovinski on 2.4.09.
 //
-#import "Masonry.h"
 #import "ProgressHUD.h"
 
 #define MBMainThreadAssert() NSAssert([NSThread isMainThread], @"ProgressHUD needs to be accessed on the main thread.");
